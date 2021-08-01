@@ -1,4 +1,5 @@
 #!/bin/bash
+# Inspired by: https://github.com/hak5/bashbunny-payloads/blob/27d63ad5a535510b20787cc03850b28bbdb727ee/payloads/library/execution/ShellExec/payload.txt
 
 # Title:     ShellExec
 # Author:    audibleblink
@@ -19,7 +20,6 @@
 MOCK_BASH_BUNNY_USB_DIR=$HOME/bash_bunny
 PAYLOAD_DIR=$MOCK_BASH_BUNNY_USB_DIR/payloads/ShellExec
 LOOT_DIR=$MOCK_BASH_BUNNY_USB_DIR/loot/ShellExec
-LOOT_FILE=$LOOT_DIR/loot.txt
 mkdir -p $MOCK_BASH_BUNNY_USB_DIR $PAYLOAD_DIR $LOOT_DIR
 
 chmod 777 $PAYLOAD_DIR

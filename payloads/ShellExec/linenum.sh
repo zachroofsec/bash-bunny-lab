@@ -1,4 +1,6 @@
 #!/bin/bash
+# INSPIRED BY: https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+
 #A script to enumerate local information from a Linux host
 version="version 0.982"
 #@rebootuser
