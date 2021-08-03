@@ -1350,12 +1350,6 @@ while getopts "h:k:r:e:st" option; do
  esac
 done
 
-MOCK_BASH_BUNNY_USB_DIR=$HOME/bash_bunny
-PAYLOAD_DIR=$MOCK_BASH_BUNNY_USB_DIR/payloads/ShellExec
-LOOT_DIR=$MOCK_BASH_BUNNY_USB_DIR/loot/ShellExec
-
-sudopass=foobarbaz
-export=$LOOT_DIR
 
 call_each | tee -a $report 2> /dev/null
 #EndOfScript
