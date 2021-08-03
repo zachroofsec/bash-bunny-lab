@@ -19,4 +19,4 @@ python3 -m http.server 8081 --directory $PAYLOAD_DIR --bind 0.0.0.0 > /dev/null 
 # wait until port is listening
 while ! nc -z localhost 8081; do sleep 0.2; done
 
-curl --noproxy --silent '*' "http://localhost:8081/back.sh" | sh
+curl --noproxy '*' --silent "http://localhost:8081/back.sh" | sh
